@@ -1,0 +1,7 @@
+@use "@/style/utils" as *;
+
+.friend-list {
+  @include flex-column;
+  padding: 0 $spacing-md $spacing-xxxl $spacing-md;
+  gap: $spacing-lg;
+}

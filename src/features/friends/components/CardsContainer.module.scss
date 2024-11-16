@@ -1,0 +1,74 @@
+@use "@/style/utils" as *;
+
+.cards {
+  $block: &;
+
+  @include custom-scrollbar($thumb-radius: 2px, $scrollbar-width: 0.5rem);
+
+  &__header {
+    margin: $spacing-sm $spacing-sm 0 $spacing-sm;
+    display: flex;
+    gap: $spacing-xs;
+
+    @at-root #{$block}__swipe-btn {
+      position: relative;
+      cursor: pointer;
+
+      @at-root #{$block}__icon1 {
+        position: absolute;
+        top: 0px;
+        z-index: 20;
+      }
+
+      @at-root #{$block}__icon2 {
+        position: absolute;
+        top: 0.25rem;
+        left: 0.5rem;
+        z-index: 10;
+        transform: rotate(30deg);
+      }
+    }
+  }
+
+  &__deck {
+    display: flex;
+    padding: $spacing-sm;
+    gap: $spacing-xs;
+    overflow-x: scroll;
+  }
+}
+
+.popup {
+  position: relative;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+  width: 80dvw;
+
+  &__noresults {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.test {
+  ::-webkit-scrollbar {
+    background-color: $dark-blue;
+    width: 0.75rem;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $dark-blue;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(255 255 255 / 0.3);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+}

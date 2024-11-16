@@ -1,0 +1,62 @@
+// Typography
+$font-family: "Be Vietnam Pro", "Open Sans", sans-serif;
+
+// Font sizes
+$text-xs: 0.75rem; // 12px
+$text-sm: 0.875rem; // 14px
+$text-md: 1rem; // 16px
+$text-lg: 1.25rem; // 20px
+$text-xl: 1.5rem; // 24px
+$text-xxl: 2rem; // 32px
+
+// Breakpoints
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Spacing
+$spacing-xxs: 0.25rem; // 4px
+$spacing-xs: 0.5rem; // 8px
+$spacing-sm: 0.75rem; // 12px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+$spacing-xxl: 3rem; // 48px
+$spacing-xxxl: 4rem; // 48px
+
+// Border radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 16px;
+$border-radius-full: 9999px; // fully rounded
+
+// Shadows
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$shadow-md: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+// Color Palette
+$primary-color: #3498db;
+$danger-color: #e74c3c;
+$light-gray-blue: #e2e8f0;
+$dark-blue: #070f2b;
+$dark-navy: #0d1a47;
+$slate-blue: #535c91;
+$lavender-gray: #9290c3;
+$red-700: #b91c1c;
+$red-500: #ef4444;
+$red-300: #fca5a5;
+$slate-700: #334155;
+$slate-400: #94a3b8;
+$slate-200: #e2e8f0;
+$slate-100: #f1f5f9;
+$green-500: #22c55e;
+$blue-600: #2563eb;
+$blue-500: #3b82f6;
+$blue-300: #93c5fd;
+$blue-100: #dbeafe;
+$gray-400: #9ca3af;
+
+// utils
+$nav-height-mobile: 3rem;
+$nav-height-desktop: 4rem;

@@ -1,0 +1,25 @@
+@use "../Dropdown.module.scss" as *;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  padding: $spacing-sm;
+  gap: $spacing-xs;
+  cursor: pointer;
+  color: $slate-700;
+  @include truncate;
+  border: 1px solid $slate-200;
+
+  svg,
+  p {
+    color: $slate-700;
+  }
+
+  &__text {
+    font-weight: 500;
+    @include truncate;
+    display: flex;
+    align-items: center;
+    font-size: $text-sm;
+  }
+}

@@ -1,0 +1,22 @@
+@use "../SwipeCard.module.scss" as *;
+
+.info {
+  @include padding(2rem, 2rem, 2rem, 2rem);
+  @include flex-column;
+  gap: $spacing-xl;
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+
+    > div {
+      background-color: $slate-700;
+      color: white;
+      font-size: $text-xs;
+      padding: $spacing-xxs $spacing-xs;
+      border-radius: $border-radius-full;
+      width: fit-content;
+    }
+  }
+}

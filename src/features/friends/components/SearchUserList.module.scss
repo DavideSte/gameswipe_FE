@@ -1,0 +1,13 @@
+@use "@/style/utils" as *;
+
+.user-list {
+  @include flex-column;
+  flex: 1;
+  overflow-y: auto;
+  gap: $spacing-xs;
+
+  &__noresults {
+    font-size: $text-sm;
+    margin-top: $spacing-xxs;
+  }
+}

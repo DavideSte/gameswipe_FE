@@ -1,0 +1,41 @@
+@use "@/style/utils" as *;
+
+.form {
+  @include flex-column;
+  gap: 1rem;
+
+  &__input {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.25);
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    line-height: 1.25rem;
+    color: #ffffff;
+    border: 1px solid transparent;
+  }
+
+  &__input:focus-visible {
+    border-color: rgba(255, 255, 255, 0.25);
+    outline-offset: 0;
+  }
+}
+
+.action {
+  @include flex-center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: $spacing-md;
+
+  &__link {
+    margin-left: $spacing-xs;
+    font-weight: 500;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+    color: $light-gray-blue;
+  }
+
+  @include breakpoint(tablet) {
+    margin-top: $spacing-sm;
+  }
+}

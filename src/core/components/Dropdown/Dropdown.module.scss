@@ -1,0 +1,9 @@
+@use "@/style/utils" as *;
+@forward "@/style/utils";
+
+.dropdown {
+  position: relative;
+  width: 100%;
+
+  @include custom-scrollbar(white, rgba(238, 238, 238, 0.953), rgb(188, 188, 188), 10px, 0.4rem);
+}

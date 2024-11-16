@@ -1,0 +1,34 @@
+@use "@/style/utils" as *;
+
+.accordion {
+  $block: &;
+
+  &__header {
+    display: flex;
+    gap: $spacing-xs;
+    align-items: center;
+    cursor: pointer;
+
+    @at-root #{$block}__separator {
+      flex: 1;
+      height: 1px;
+      margin-left: $spacing-xs;
+      background-color: white;
+    }
+  }
+
+  &__content {
+    @include flex-column;
+    gap: $spacing-xs;
+    overflow: hidden;
+
+    &--active {
+      margin-top: $spacing-md;
+    }
+
+    @include breakpoint(desktop) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}

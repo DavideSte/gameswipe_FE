@@ -1,0 +1,14 @@
+@use "@/style/utils" as *;
+
+.label-container {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+
+  svg,
+  p {
+    color: $slate-400;
+    font-weight: 600;
+    font-size: $text-sm;
+  }
+}

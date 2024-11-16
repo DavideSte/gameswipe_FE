@@ -1,0 +1,35 @@
+@use "@/style/utils" as *;
+
+.filters {
+  &__modal-header {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding: 0px $spacing-md;
+    position: relative;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    &__modal-header {
+      display: none;
+    }
+  }
+
+  &__container {
+    color: black;
+    padding: $spacing-xl;
+    @include flex-column;
+    height: fit-content;
+    gap: $spacing-lg;
+  }
+
+  &__submit {
+    display: flex;
+    justify-content: end;
+    padding: $spacing-xl;
+  }
+}

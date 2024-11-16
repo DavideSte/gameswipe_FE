@@ -1,0 +1,108 @@
+@use "./utils" as *;
+@use "sass:color";
+
+html {
+  font-family: $font-family;
+  font-size: $text-md;
+  line-height: 1.5;
+  font-weight: 400;
+  @include custom-scrollbar();
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $dark-blue;
+  color: $light-gray-blue;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// Global Typography Styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.022em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+  font-size: $text-md;
+  line-height: 1.5;
+  color: $light-gray-blue;
+}
+
+span {
+  font-size: $text-md;
+  color: $light-gray-blue;
+}
+
+small {
+  font-size: $text-sm;
+  color: color.scale($light-gray-blue, $lightness: -23.5023041475%);
+  color: color.adjust($light-gray-blue, $lightness: -20%);
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+// Remove default styling for input
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: white !important;
+}
+
+input {
+  font-family: inherit;
+}
+
+// Show scrollbar only for certain display
+@media (max-width: $breakpoint-tablet) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

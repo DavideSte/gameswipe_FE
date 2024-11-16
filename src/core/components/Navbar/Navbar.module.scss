@@ -1,0 +1,102 @@
+@use "@/style/utils" as *;
+
+.navbar {
+  // shared style for mobile and desktop
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  svg {
+    color: white;
+  }
+
+  &.navbar--mobile {
+    @include paddingX(2.5rem);
+    position: fixed;
+    z-index: 30;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0px;
+    width: 100%;
+    background-color: $dark-navy;
+    border: 1px solid;
+    border-top-width: 1px;
+    border-color: rgb(255 255 255 / 0.05);
+    height: 3rem;
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+
+    svg {
+      opacity: 0.7;
+      stroke-width: 1.2px;
+    }
+
+    .navbar__link {
+      @include flex-center;
+
+      &--active svg {
+        opacity: 0.8;
+        stroke-width: 2.5px;
+      }
+    }
+  }
+
+  &.navbar--desktop {
+    @include paddingX(2.5rem);
+    display: none;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    background-color: $dark-navy;
+    height: 4rem;
+    z-index: 30;
+    align-items: center;
+    gap: 3rem;
+
+    @include breakpoint(desktop) {
+      display: flex;
+    }
+
+    .navbar__logo {
+      @include paddingY(2rem);
+      @include flex-center;
+      gap: 0.75rem;
+
+      &-icon {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+
+      &-text {
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+
+    .navbar__nav-links {
+      flex: 1;
+      display: flex;
+      gap: 0.75rem;
+
+      .navbar__link {
+        @include flex-center;
+        font-weight: 300;
+        font-size: $text-sm;
+        opacity: 0.7;
+
+        &--active {
+          opacity: 0.8;
+          font-weight: 700;
+        }
+      }
+    }
+
+    .navbar__profile {
+      @include flex-center;
+    }
+  }
+}

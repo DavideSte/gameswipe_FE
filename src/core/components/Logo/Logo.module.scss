@@ -1,0 +1,18 @@
+@use "@/style/utils" as *;
+
+.logo {
+  @include flex-center;
+  margin: 0px;
+  width: 100%;
+  gap: $spacing-md;
+  justify-content: center;
+
+  &__icon {
+    flex-shrink: 0;
+    font-size: 2.3rem;
+  }
+
+  &__name {
+    @include truncate;
+  }
+}

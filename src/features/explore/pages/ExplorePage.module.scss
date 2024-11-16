@@ -1,0 +1,87 @@
+@use "@/style/utils" as *;
+
+.explore-page {
+  $block: &;
+
+  @include flex-column;
+  height: calc(100dvh - $nav-height-mobile);
+  overflow: hidden;
+
+  &__sidebar {
+    display: none;
+    width: 300px;
+    flex-shrink: 0;
+    background-color: white;
+    border-radius: $border-radius-lg;
+  }
+
+  &__header {
+    @include padding(1rem, 1rem, 1rem, 1rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @at-root #{$block}__slider-icon {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 9999px;
+      padding: 0.5rem;
+      height: 2rem;
+      width: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+  }
+
+  &__cards-container {
+    padding: $spacing-sm;
+    padding-top: 0px;
+    flex: 1;
+    display: grid;
+    place-items: center;
+    position: relative;
+    z-index: 10;
+    border-radius: $border-radius-md;
+  }
+
+  @include breakpoint(desktop) {
+    flex-direction: row;
+    height: calc(100dvh - $nav-height-desktop);
+    padding: $spacing-xl;
+    gap: $spacing-md;
+
+    &__sidebar {
+      display: unset;
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__cards-container {
+      padding: 0px;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
+  min-height: 90dvh;
+  padding-top: 1rem;
+  display: block;
+
+  @include breakpoint(desktop) {
+    display: none;
+  }
+}

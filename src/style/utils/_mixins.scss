@@ -1,0 +1,140 @@
+@use "./variables" as *;
+
+// Mixin to handle responsive breakpoints
+@mixin respond-to($device) {
+  @if $device == mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $device == tablet {
+    @media (min-width: ($breakpoint-mobile+1)) and (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $device == desktop {
+    @media (min-width: ($breakpoint-tablet+1)) and (max-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else if $device == large-desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint($device) {
+  @if $device == mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $device == tablet {
+    @media (min-width: ($breakpoint-mobile+1)) {
+      @content;
+    }
+  } @else if $device == desktop {
+    @media (min-width: ($breakpoint-tablet+1)) {
+      @content;
+    }
+  } @else if $device == large-desktop {
+    @media (min-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+}
+
+// Flexbox Centering Mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Spacing Mixins
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin paddingY($value: 0) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin paddingX($value: 0) {
+  padding-right: $value;
+  padding-left: $value;
+}
+
+@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+// Animation Mixin
+@mixin fade-in {
+  animation: fade-in 0.5s ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@mixin spin($duration: 1s, $timing-function: linear, $direction: normal) {
+  animation: spin $duration $timing-function infinite $direction;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// Utility Mixins
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin custom-scrollbar(
+  $scrollbar-bg: $dark-blue,
+  $track-bg: $dark-blue,
+  $thumb-bg: rgba(255, 255, 255, 0.3),
+  $thumb-radius: 9999px,
+  $scrollbar-width: 0.75rem
+) {
+  ::-webkit-scrollbar {
+    background-color: $scrollbar-bg;
+    width: $scrollbar-width;
+    height: $scrollbar-width;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $track-bg;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $thumb-bg;
+    border-radius: $thumb-radius;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+}

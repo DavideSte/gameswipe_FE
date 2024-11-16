@@ -1,0 +1,42 @@
+@use "@/style/utils" as *;
+
+.game {
+  $block: &;
+
+  display: flex;
+  gap: $spacing-xs;
+  background-color: $dark-navy;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  height: 8rem;
+
+  &__image {
+    height: 100%;
+    width: 8rem;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  }
+
+  &__details {
+    @include truncate;
+    @include flex-column;
+    gap: $spacing-xxs;
+    padding: $spacing-md $spacing-xs;
+    flex: 1 1 0%;
+    justify-content: space-between;
+
+    h6 {
+      @include truncate;
+    }
+
+    @at-root #{$block}__metadata {
+      @include flex-column;
+      gap: $spacing-xxs;
+    }
+  }
+}

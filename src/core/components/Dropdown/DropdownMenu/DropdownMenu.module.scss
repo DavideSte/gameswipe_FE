@@ -1,0 +1,47 @@
+@use "../Dropdown.module.scss" as *;
+
+.options {
+  $block: &;
+
+  position: absolute;
+  z-index: 50;
+  box-shadow: $shadow-md;
+  border-width: 1px;
+  border-color: rgb(0 0 0 / 0.1);
+  left: 0px;
+  background-color: white;
+  max-height: 10rem;
+  overflow: auto;
+  margin-top: $spacing-xs;
+  border-radius: $border-radius-md;
+  width: 100%;
+
+  &--active {
+    div:not(:last-child) {
+      border-bottom: 1px solid rgb(0 0 0 / 0.1);
+    }
+  }
+
+  &__hints {
+    p {
+      padding: $spacing-sm;
+      font-size: $text-sm;
+      display: flex;
+      align-items: center;
+    }
+
+    @at-root #{$block}__noresults {
+      color: black;
+    }
+
+    @at-root #{$block}__extra {
+      cursor: pointer;
+      color: $blue-500;
+    }
+
+    hr {
+      margin: auto 0px;
+      border-color: rgb(0 0 0 / 0.1);
+    }
+  }
+}

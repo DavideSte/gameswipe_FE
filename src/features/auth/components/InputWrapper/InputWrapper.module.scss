@@ -1,0 +1,19 @@
+@use "@/style/utils" as *;
+
+.field {
+  @include flex-column;
+  gap: $spacing-xxs;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    margin-left: 3px;
+    font-weight: 600;
+  }
+
+  &__error {
+    font-size: $text-xs;
+    color: $red-500;
+  }
+}

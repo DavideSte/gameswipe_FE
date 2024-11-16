@@ -1,0 +1,18 @@
+@use "@/style/utils" as *;
+
+.filter {
+  @include flex-column;
+  gap: $spacing-xs;
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    margin-left: $spacing-xxs;
+
+    span {
+      font-weight: 700;
+      color: black;
+    }
+  }
+}

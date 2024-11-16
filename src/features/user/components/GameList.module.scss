@@ -1,0 +1,18 @@
+@use "@/style/utils" as *;
+
+.game-list {
+  @include flex-column;
+  gap: $spacing-sm;
+  padding: 0px $spacing-md $spacing-xxxl $spacing-md;
+
+  @include breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__none {
+    text-align: center;
+    color: $slate-400;
+    font-size: $text-lg;
+  }
+}

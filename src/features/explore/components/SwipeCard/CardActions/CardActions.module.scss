@@ -1,0 +1,54 @@
+@use "../SwipeCard.module.scss" as *;
+
+.actions {
+  position: sticky;
+  width: 100%;
+  padding: 0px $spacing-xl $spacing-xl $spacing-xl;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  .icon {
+    @include flex-center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: $border-radius-full;
+    padding: $spacing-sm;
+    background-color: $slate-700;
+
+    svg {
+      height: 100%;
+      width: 100%;
+    }
+
+    // swipe left
+    &__discard {
+      color: $red-500;
+
+      &--active {
+        color: $slate-700;
+        background-color: $red-500;
+      }
+    }
+
+    // swipe right
+    &__pad {
+      color: $green-500;
+
+      &--active {
+        color: $slate-700;
+        background-color: $green-500;
+      }
+    }
+
+    // swipe up
+    &__heart {
+      height: 3rem;
+      width: 3rem;
+      color: $blue-500;
+      margin-bottom: $spacing-sm;
+    }
+  }
+}

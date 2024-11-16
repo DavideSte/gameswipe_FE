@@ -1,0 +1,29 @@
+@use "@/style/utils" as *;
+@forward "@/style/utils";
+
+.card {
+  width: 100%;
+  height: calc(100dvh - 126px);
+  background-color: black;
+  overflow-y: auto;
+  position: relative;
+  overflow-x: hidden;
+  border-radius: 0.75rem;
+  z-index: 10;
+
+  &:hover {
+    cursor: grab;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  &__next {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 0.8);
+  }
+}

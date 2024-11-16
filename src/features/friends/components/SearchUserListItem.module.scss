@@ -1,0 +1,69 @@
+@use "@/style/utils" as *;
+
+.user {
+  $block: &;
+
+  display: flex;
+  background-color: $dark-navy;
+  border-radius: $border-radius-md;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  * {
+    @include truncate;
+  }
+
+  &__image {
+    height: 3.5rem;
+    width: 3.5rem;
+    flex-shrink: 0;
+    background-color: $red-300;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  }
+
+  &__details {
+    @include flex-column;
+    padding: 0px $spacing-sm;
+    justify-content: center;
+    flex: 1;
+
+    @at-root #{$block}__username {
+      font-size: $text-sm;
+      font-weight: 600;
+    }
+
+    @at-root #{$block}__email {
+      font-size: $text-xs;
+      color: $gray-400;
+    }
+  }
+
+  &__actions {
+    flex-shrink: 0;
+    @include flex-center;
+    padding: $spacing-xs;
+    padding: 0px $spacing-sm 0px 0px;
+
+    button {
+      background-color: transparent;
+      color: white;
+      text-decoration: none;
+      border: none;
+      outline: none;
+      width: fit-content;
+      cursor: pointer;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}
+
+.loading {
+  background-color: $dark-navy;
+  @include spin();
+}

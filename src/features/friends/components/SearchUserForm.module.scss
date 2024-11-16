@@ -1,0 +1,88 @@
+@use "@/style/utils" as *;
+
+.friends-popup {
+  @include flex-column;
+  height: 80dvh;
+  width: 90dvw;
+  background-color: $dark-blue;
+  box-shadow: $shadow-md;
+  border: 1px solid;
+  border-color: rgb(255 255 255 / 0.15);
+  padding: $spacing-xl;
+  border-radius: $border-radius-md;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-sm;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 48rem;
+  }
+
+  hr {
+    margin: $spacing-md 0px;
+    border-color: rgb(255 255 255 / 0.2);
+  }
+
+  &__noresults {
+    font-size: $text-sm;
+    margin-top: $spacing-xs;
+  }
+}
+
+.friends-form {
+  $block: &;
+  position: relative;
+
+  &__input {
+    outline: none;
+    width: 100%;
+    background-color: rgb(255 255 255 / 0.25);
+    border: 1px solid transparent;
+    font-size: $text-sm;
+    padding: $spacing-xs $spacing-sm;
+    padding-right: 4.5rem;
+    border-radius: $border-radius-md;
+    color: white;
+    height: 2.5rem;
+
+    &:focus-visible {
+      border-color: rgb(255 255 255 / 0.25);
+    }
+
+    &::placeholder {
+      color: $gray-400;
+      opacity: 1; /* Firefox */
+    }
+
+    &::-ms-input-placeholder {
+      /* Edge 12 -18 */
+      color: $gray-400;
+    }
+  }
+
+  &__actions {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 6px $spacing-sm;
+
+    @at-root #{$block}__separator {
+      width: 2px;
+      height: 100%;
+      margin: 0px 8px;
+      background-color: rgb(255 255 255 / 0.6);
+    }
+
+    svg {
+      cursor: pointer;
+    }
+  }
+}

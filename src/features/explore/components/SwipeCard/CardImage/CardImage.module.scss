@@ -1,0 +1,11 @@
+.img-container {
+  height: 100%;
+  width: 100%;
+
+  img {
+    height: calc(100dvh - 126px);
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,25 @@
+@use "../Dropdown.module.scss" as *;
+
+.label {
+  width: fit-content;
+  white-space: nowrap;
+  background-color: $slate-100;
+  border: 1px solid $slate-200;
+  border-radius: $border-radius-md;
+  padding: $spacing-xxs $spacing-xs;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: $spacing-xxs;
+
+  p {
+    @include truncate;
+    max-width: 3.5rem;
+    font-size: $text-xs;
+    color: $slate-700;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+}

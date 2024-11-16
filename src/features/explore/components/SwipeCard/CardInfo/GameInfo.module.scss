@@ -1,0 +1,20 @@
+@use "@/style/utils" as *;
+
+.info {
+  @include flex-column;
+  gap: $spacing-xs;
+
+  p {
+    font-size: $text-sm;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+
+    p {
+      font-weight: 600;
+    }
+  }
+}
