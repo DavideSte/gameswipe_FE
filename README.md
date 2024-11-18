@@ -111,10 +111,10 @@ The Application is completely responsive and can be used comfortably on mobile a
 
 ### Mobile view
 
-![Mobile](./screenshots/mobilegif.gif)
+![Mobile](./screenshots/mobile.mp4)
 
 ### Desktop view
 
-![Desktop](./screenshots/desktopgif.gif)
+![Desktop](./screenshots/desktop.mp4)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
