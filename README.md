@@ -111,10 +111,10 @@ The Application is completely responsive and can be used comfortably on mobile a
 
 ### Mobile view
 
-![Mobile](./screenshots/mobile.mp4)
+<video src="./screenshots/mobile.mp4" autoplay loop muted ></video>
 
 ### Desktop view
 
-![Desktop](./screenshots/desktop.mp4)
+<video src="./screenshots/desktop.mp4" autoplay loop muted ></video>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
