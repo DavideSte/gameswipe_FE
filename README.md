@@ -111,10 +111,10 @@ The Application is completely responsive and can be used comfortably on mobile a
 
 ### Mobile view
 
-<video src="./screenshots/mobile.mp4" autoplay loop muted ></video>
+<video src="https://github.com/user-attachments/assets/07f5ec36-4635-4701-9818-4ff78a3ff032" autoplay loop muted ></video>
 
 ### Desktop view
 
-<video src="./screenshots/desktop.mp4" autoplay loop muted ></video>
+<video src="https://github.com/user-attachments/assets/7886f38a-144c-4c1b-9698-8b9d3a8a3592" autoplay loop muted ></video>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
